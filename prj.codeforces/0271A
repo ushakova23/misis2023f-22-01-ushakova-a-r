@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+
+int main() {
+    int y;
+    std::cin >> y;
+
+    while (true) {
+        y++; 
+
+        std::string year = std::to_string(y); 
+        std::sort(year.begin(), year.end()); 
+
+       
+        if (std::unique(year.begin(), year.end()) == year.end()) {
+            std::cout << y << std::endl;
+            break;
+        }
+    }
+
+    return 0;
+}
