@@ -1,0 +1,33 @@
+#include <iostream>
+
+int main() {
+    int t;
+    std::cin >> t;
+
+    while (t--) {
+        int a, b, c;
+        std::cin >> a >> b >> c;
+
+        int kount = 0;
+
+        while (a != b) 
+        {
+            if (a > b) {
+                int d = std::min(a - b, c);
+                a -= d;
+                b += d;
+            }
+            else {
+                int d = std::min(b - a, c);
+                b -= d;
+                a += d;
+            }
+
+            kount++;
+        }
+
+        std::cout << kount << std::endl;
+    }
+
+    return 0;
+}
