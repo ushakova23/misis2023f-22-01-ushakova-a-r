@@ -1,0 +1,7 @@
+add_executable(0144A.cpp)
+add_executable(0271A.cpp)
+add_executable(0461A.cpp)
+add_executable(0520A.cpp)
+add_executable(0723A.cpp)
+add_executable(0915A.cpp)
+add_executable(1872A.cpp)
