@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string>
+
+int main()
+{
+    int t;
+    std::cin >> t;
+    while (t--) {
+        int a, b;
+        char plus;
+        std::cin >> a >> plus >>b ;
+        int d = a + b;
+        std::cout << d << std::endl;
+        
+    }
+
+}
