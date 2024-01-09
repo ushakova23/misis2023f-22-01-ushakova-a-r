@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string months[12] = {
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+    };
+
+    std::string s;
+    int k;
+    std::cin >> s >> k;
+
+    int currentIndex = 0;
+    for (int i = 0; i < 12; i++) {
+        if (s == months[i]) {
+            currentIndex = i;
+            break;
+        }
+    }
+
+    int targetIndex = (currentIndex + k) % 12;
+    std::cout << months[targetIndex] << std::endl;
+
+    return 0;
+}
