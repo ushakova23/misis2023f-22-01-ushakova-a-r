@@ -38,6 +38,9 @@ void centralProjection(cv::Mat& inputImage) {
     // Отображение выходного изображения
     cv::imshow("Центральная проекция", outputImage);
     cv::waitKey(0);
+
+    // Сохранение выходного изображения
+    cv::imwrite("output_image.jpg", outputImage);
 }
 
 int main() {
