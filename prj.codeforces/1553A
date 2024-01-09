@@ -1,0 +1,39 @@
+#include <iostream>
+ 
+int Sum1(int x) {
+    int sum = 0;
+    while (x > 0) {
+        sum += x % 10;
+        x /= 10;
+    }
+    return sum;
+}
+ 
+int main() {
+    int t;
+    std::cin >> t;
+ 
+    for (int i = 0; i < t; i++) {
+        int n;
+        std::cin >> n;
+ 
+        int count = 0;
+        int Sum2 = 1;
+ 
+        for (int x = 1; x <= n; x++) {
+            if (Sum2 > Sum1(x)) {
+                count++;
+            }
+ 
+            Sum2++;
+            if (Sum2 == 10) {
+                Sum2 = 1;
+                x++;
+            }
+        }
+ 
+        std::cout << count << std::endl;
+    }
+ 
+    return 0;
+}
