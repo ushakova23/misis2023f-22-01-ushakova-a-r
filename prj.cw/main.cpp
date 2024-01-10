@@ -30,8 +30,11 @@ void centralProjection(cv::Mat& inputImage) {
             int outputX = static_cast<int>(projectedX + outputImage.cols / 2);
             int outputY = static_cast<int>(projectedY + outputImage.rows / 2);
 
-            // Установка значения пикселя в выходном изображении
-            outputImage.at<cv::Vec3b>(outputY, outputX) = inputImage.at<cv::Vec3b>(y, x);
+            // Проверка границ выходного изображения
+            if (outputX >= 0 && outputX < outputImage.cols && outputY >= 0 && outputY < outputImage.rows) {
+                // Установка значения пикселя в выходном изображении
+                outputImage.at<cv::Vec3b>(outputY, outputX) = inputImage.at<cv::Vec3b>(y, x);
+            }
         }
     }
 
