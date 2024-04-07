@@ -6,20 +6,20 @@ using namespace std;
 
 int main(int argc, char** argv) {
     if (argc != 3) {
-        cout << "Usage: " << argv[0] << " <MF_input_image> <MF_output_image>" << endl;
+        cout << "Usage: " << argv[0] << " <InputImage> <OutputImage>" << endl;
         return -1;
     }
 
     Mat inputImage = imread(argv[1], IMREAD_COLOR);
-    if (MF_input_image.empty()) {
+    if (InputImage.empty()) {
         cout << "Could not open or find the image" << endl;
         return -1;
     }
 
     ImageProcessor ip;
-    Mat outputImage = ip.applyVectorMedianFilter(MF_input_image, 3); // Пример использования с размером ядра 3x3
+    Mat outputImage = ip.applyVectorMedianFilter(InputImage, 3); // Пример использования с размером ядра 3x3
 
-    imwrite(argv[2], MF_output_image);
+    imwrite(argv[2], OutputImage);
 
     return 0;
 }
