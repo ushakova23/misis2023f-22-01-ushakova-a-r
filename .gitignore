@@ -1,3 +1,10 @@
+# Report file, you need to make it by yourself
+report.html
+
+# Some dirs
+build
+bin
+
 # Prerequisites
 *.d
 
@@ -30,5 +37,3 @@
 *.exe
 *.out
 *.app
-
-build
